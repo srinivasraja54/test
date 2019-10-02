@@ -11,12 +11,13 @@ pipeline {
 		sh 'cat Deployment.yml'
 	        }
 	      }
+	  }
 	  stages {
 	    stage('find keyword in deploykent file ') {
 	      steps {
 		sh 'echo "dep yaml print is initialising"'
-		sh 'cat fileContent'
+		sh 'cat $fileContent'
 	        }
-	      }		  
-     }
+      }
+    }
    }
