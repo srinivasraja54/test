@@ -14,7 +14,7 @@ pipeline {
 	    stage('find keyword in deploykent file ') {
 	      steps {
 		sh 'echo "dep yaml print is initialising"'
-		sh 'echo $filePath
+		sh 'echo $filePath'
 		sh 'if grep quay $filePath; then flag = True; fi'
 		sh 'echo $flag'
 	      }
