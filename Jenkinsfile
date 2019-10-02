@@ -1,7 +1,7 @@
 pipeline {
   environment {
     def filePath= "./Deployment.yml"
-    def fileContent = readFile.readFileString(filePath)
+    //def fileContent = readFile.readFileString(filePath)
    }
   agent any
 	  stages {
@@ -14,8 +14,8 @@ pipeline {
 	    stage('find keyword in deploykent file ') {
 	      steps {
 		sh 'echo "dep yaml print is initialising"'
-		sh 'cat $fileContent'
-	       }
+		sh 'if grep quay filepath; then flag = True; fi'
+	      }
             } 
      }
   }
