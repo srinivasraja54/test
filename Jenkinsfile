@@ -1,14 +1,22 @@
 pipeline {
   environment {
-    file_name = "Deployment.yml"
+    def filePath= "Deployment.yml"
+    def fileContent = readFile.readFileString(filePath)
    }
   agent any
 	  stages {
-	    stage('Dockerfile print') {
+	    stage('deployment file print') {
 	      steps {
-		sh 'echo "dockerfile print is initialising"'
-		sh 'cat Dockerfile'
+		sh 'echo "dep yaml print is initialising"'
+		sh 'cat Deployment.yml'
 	        }
 	      }
+	  stages {
+	    stage('find keyword in deploykent file ') {
+	      steps {
+		sh 'echo "dep yaml print is initialising"'
+		sh 'cat fileContent'
+	        }
+	      }		  
      }
    }
