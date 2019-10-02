@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    def filePath= "Deployment.yml"
+    def filePath= "./Deployment.yml"
     def fileContent = readFile.readFileString(filePath)
    }
   agent any
