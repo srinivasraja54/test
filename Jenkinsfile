@@ -8,7 +8,12 @@ pipeline {
 	    stage('deployment file print') {
 	      steps {
 		sh 'echo "dep yaml print is initialising"'
-		sh 'cat $fileContents'
+		sh 'cat $version'
+		      if(version.contains("quay")){
+		      	print "contains"
+		      } else {
+			print "doesnt contains"
+		      }
 	        }
 	      }
 	    stage('find keyword in deploykent file ') {
