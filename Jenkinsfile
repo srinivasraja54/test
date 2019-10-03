@@ -13,6 +13,7 @@ pipeline {
 		sh 'echo "dep yaml print is initialising"'
 		sh 'cat $version'
 	      }
+	      }
 	    stage('find keyword in deploykent file ') {
 	      steps {
 		sh 'echo "dep yaml print is initialising"'
