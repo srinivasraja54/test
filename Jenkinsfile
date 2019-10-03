@@ -1,8 +1,7 @@
 pipeline {
   environment {
     def filePath= "./Deployment.yml"
-    env.WORKSPACE = pwd()
-    def version = readFile "${env.WORKSPACE}/Deployment.yml"
+    def version = readFile "Deployment.yml"
    }
   agent any
 	  stages {
