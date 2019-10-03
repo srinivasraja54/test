@@ -3,7 +3,7 @@ pipeline {
     def filePath= "./Deployment.yml"
     def version = readFile "Deployment.yml"
     def lines = new File('Deployment.yml').readLines()
-    def result = lines.findAll { it.contains('redhat') }
+    def result = lines.findAll { it.contains('quay') }
      println result*.toString()
    }
   agent any
