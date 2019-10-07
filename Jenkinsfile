@@ -4,7 +4,7 @@ pipeline {
     def version = readFile "Deployment.yml"
     def lines = new File('Deployment.yml').readLines()
     def result = lines.findAll { it.contains('quay') }
-     println result*.toString()
+    //println result*.toString()
    }
   agent any
 	  stages {
