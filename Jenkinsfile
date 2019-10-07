@@ -1,9 +1,9 @@
 pipeline {
   environment {
     def filePath= "./Deployment.yml"
-    def version = readFile "Deployment.yml"
-    def lines = new File('Deployment.yml').readLines()
-    def result1 = new File('Deployment.yml').readLines().grep(~/[q][u][a][y]/)
+    def version = readFile "./Deployment.yml"
+    def lines = new File('./Deployment.yml').readLines()
+    def result1 = new File('./Deployment.yml').readLines().grep(~/[q][u][a][y]/)
     def result = lines.findAll { it.contains('quay') }
  }
   agent any
