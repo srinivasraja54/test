@@ -23,3 +23,36 @@ monitor:
   - prometheus
 
 # halconfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  monitoringDaemon:
+    port: 8008
+    address: spin-monitoring-daemon.default
+    host: 0.0.0.0
+    scheme: http
+    env: {}
+    artifactId: gcr.io/spinnaker-marketplace/monitoring-daemon:0.9.1-20181101125517
+    location: default
+    kubernetes:
+      imagePullSecrets: []
+      podAnnotations: {}
+    enabled: true
+    monitored: false
+    sidecar: true
+    safeToUpdate: true
+    targetSize: 1
+    skipLifeCycleManagement: false
+    baseUrl: http://spin-monitoring-daemon.default:8008
